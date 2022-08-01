@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1.0, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>Ely's Code Quiz</title>
+    
+</head>
+<body>
+    <!--This will be how you begin the quiz-->
+    <div class="start_btn"><button>Begin!!!</button>
+    </div>
+
+    <div class="info_box">
+        <div class="info_title">
+            <span>Here are the rules...</span>
+        </div>
+        <div class="info_list">
+            <div class="info">You will only have <span>90 seconds</span> for the whole quiz.</div>
+            <div class="info">All answers are final--no going back.</div>
+            <div class="info">Any incorrect answers will detract your time limit.</div>
+            <div class="info">More correct answers will result in a higher grade!</div>
+        </div>
+        <div class="buttons">
+            <button class="quit_game">
+                Quit
+            </button>
+            <button class="restart_game">
+                Start
+            </button>
+        </div>
+    </div>
+    <div class="quiz_box">
+        <header>
+            <div class="title">Ely's Code Quiz</div>
+            <div class="timer">
+                <div class="time_text">
+                    Timer:
+                    <div class="timer_sec">90</div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="question_box">
+                <!--<span>Commonly used data types DO NOT include:</span> !-->
+            </div>
+            <div class="option_list">
+                <div class="option">
+                    <span>Strings</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Booleans</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Alerts</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="option">
+                    <span>Numbers</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+        </section>
+        <!--Footer for quiz box-->
+        <footer>
+            <div class="total_questions">
+                <!--<span><p>2</p>out of<p>5</p>Questions</span>!-->
+            </div>
+            <button class="next_btn">Next >></button>
+        </footer>
+    </div>
+    <!--The result box of your score should be here!-->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="finish_text">
+            You've finished! :D Congratulations.
+        </div>
+        <div class="score_text">
+            <span>Amazing. You failed with only <p>2</p>out of <p>5</p></span>
+        </div>
+        <div class="buttons">
+            <button class="restart_game">
+                Retry?
+            </button>
+            <button class="quit_game">
+                Quit
+            </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets\questions.js"></script>
+    <script src="assets\script.js"> </script>
+    
+</body>
+</html>
