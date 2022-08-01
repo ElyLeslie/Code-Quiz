@@ -8,7 +8,7 @@ const result_box = document.querySelector(".result_box");
 const restart_quiz = result_box.querySelector(".buttons .quit_game")
 const quit_game = result_box.querySelector(".buttons .restart_game")
 const all_choices = document.querySelector(".option_list");
-const timeCount = quiz_box.querySelector(".timer .timer_sec");
+var timeCount = quiz_box.querySelector(".timer .timer_sec");
 
 
 var wrongChoice = false
@@ -113,7 +113,7 @@ let tickIcon = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIcon = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 
-function startTimer(time) {
+function startTimer() {
   counter = setInterval(timer, 1000);
   function timer(){
     timeCount.textContent = time; 
@@ -133,11 +133,14 @@ function startTimer(time) {
           all_choices.children[i].setAttribute("class", "option correct");
           all_choices.children[i].insertAdjacentHTML("beforeend", tickIcon);
         }
+       
       for (let i = 0; i < allOptions; i++) {
       all_choices.children[i].classList.add("disabled");
         }
       next_btn.style.display = "block";
+      showResultBox()
     }
+
   }
 } }
 
@@ -159,7 +162,8 @@ function optionSelected(answer){
   }
   else {
     wrongChoice = true;
-    
+    time = time - 20;
+    console.log(time)
     
     answer.classList.add("incorrect");
     console.log ("Answer is incorrect!!!");
